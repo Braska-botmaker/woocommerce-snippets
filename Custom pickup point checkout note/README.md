@@ -1,5 +1,9 @@
 # Custom Pickup Point Checkout Note
 
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)](README.md#requirements)
+[![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759B?logo=wordpress&logoColor=white)](README.md#requirements)
+[![WooCommerce](https://img.shields.io/badge/WooCommerce-7.0%2B-96588A?logo=woocommerce&logoColor=white)](README.md#requirements)
+
 Adds a short note under WooCommerce's **Local pickup** shipping option at checkout, shown only when it's selected, plus full pickup point details (address, phone, opening hours) in the customer's order emails whenever the order uses local pickup.
 
 ## What it does

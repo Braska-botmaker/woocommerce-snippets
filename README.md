@@ -4,10 +4,12 @@
 
 **A curated library of small, focused WordPress & WooCommerce snippets** — hooks, filters and functions, each self-contained, configurable, and ready to drop into any site.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Lint](https://github.com/Braska-botmaker/woocommerce-snippets/actions/workflows/lint.yml/badge.svg)](https://github.com/Braska-botmaker/woocommerce-snippets/actions/workflows/lint.yml)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Changelog](https://img.shields.io/badge/changelog-keep--a--changelog-blue.svg)](CHANGELOG.md)
+[![Release](https://img.shields.io/github/v/release/Braska-botmaker/woocommerce-snippets?label=release&color=2f81f7)](https://github.com/Braska-botmaker/woocommerce-snippets/releases/latest)
+[![CI](https://img.shields.io/github/actions/workflow/status/Braska-botmaker/woocommerce-snippets/lint.yml?branch=main&label=CI)](https://github.com/Braska-botmaker/woocommerce-snippets/actions/workflows/lint.yml)
+[![License](https://img.shields.io/badge/License-MIT-2f81f7)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/Braska-botmaker/woocommerce-snippets?label=issues&color=3fb950)](https://github.com/Braska-botmaker/woocommerce-snippets/issues)
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)](README.md#requirements)
+[![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759B?logo=wordpress&logoColor=white)](README.md#requirements)
 
 </div>
 

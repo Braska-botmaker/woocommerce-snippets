@@ -1,5 +1,9 @@
 # Stock Quantity per Package Display
 
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)](README.md#requirements)
+[![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759B?logo=wordpress&logoColor=white)](README.md#requirements)
+[![WooCommerce](https://img.shields.io/badge/WooCommerce-7.0%2B-96588A?logo=woocommerce&logoColor=white)](README.md#requirements)
+
 Displays WooCommerce stock quantity as a number of **packages** on the frontend, while stock in the database stays in units — and converts ordered quantities back to units when an order reduces stock.
 
 ## What it does

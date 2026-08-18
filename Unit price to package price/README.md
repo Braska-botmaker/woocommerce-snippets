@@ -1,5 +1,9 @@
 # Unit Price to Package Price
 
+[![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)](README.md#requirements)
+[![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759B?logo=wordpress&logoColor=white)](README.md#requirements)
+[![WooCommerce](https://img.shields.io/badge/WooCommerce-7.0%2B-96588A?logo=woocommerce&logoColor=white)](README.md#requirements)
+
 Sells products by the package while keeping unit prices in the database. Displays the package price on the shop/product page and recalculates the real cart & checkout line price to match, so totals, taxes and order records stay correct.
 
 ## What it does
