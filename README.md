@@ -37,6 +37,7 @@ Every snippet here started life on a real, live WordPress/WooCommerce store, the
 | [Unit price to package price](Unit%20price%20to%20package%20price/) | Displays and charges prices per package instead of per unit, based on a "units per package" product attribute. |
 | [Stock quantity per package display](Stock%20quantity%20per%20package%20display/) | Shows stock as a number of packages on the frontend while keeping stock stored in units in the database. |
 | [Custom pickup point checkout note](Custom%20pickup%20point%20checkout%20note/) | Adds a short note under the selected Local Pickup shipping option at checkout, and full pickup details in order emails. |
+| [Custom order email notice](Custom%20order%20email%20notice/) | Adds a short custom message (e.g. a temporary dispatch-delay announcement) to WooCommerce customer order emails — the "Processing order" email by default, with optional per-language text. |
 
 Not every future snippet in this repo will necessarily touch WooCommerce — some may be plain WordPress. Each one lists its own requirements in its folder's `README.md`.
 

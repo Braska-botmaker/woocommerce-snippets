@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Custom order email notice** — adds a short custom message to WooCommerce customer order emails, targeted by email ID (the `customer_processing_order` "Processing order" email by default). Understated styling (optional heading + text, thin rule, no coloured box) so it suits any message, not just warnings. Multilingual two ways, no extra snippet: `WCSNIP_EMAIL_NOTICE_STRING_TRANSLATION` registers the message/heading for Polylang or WPML string translation, or the message constant can be a `locale => text` array. Message, heading, target emails and placement are configurable via constants/filters, and the snippet adds nothing to any email until the message is filled in.
+
 ## [1.0.0] - 2026-08-18
 
 ### Added
