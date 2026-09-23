@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-09-23
+
 ### Added
 
 - **Custom order email notice** — adds a short custom message to WooCommerce customer order emails, targeted by email ID (the `customer_processing_order` "Processing order" email by default). Understated styling (optional heading + text, thin rule, no coloured box) so it suits any message, not just warnings. Multilingual two ways, no extra snippet: `WCSNIP_EMAIL_NOTICE_STRING_TRANSLATION` registers the message/heading for Polylang or WPML string translation, or the message constant can be a `locale => text` array. Message, heading, target emails and placement are configurable via constants/filters, and the snippet adds nothing to any email until the message is filled in.
@@ -30,5 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - All snippets were generalized from their original store-specific implementations: hardcoded values (addresses, attribute slugs, SKU rules, text) were replaced with `define()` constants and `apply_filters()` hooks so each snippet can be configured without editing its logic.
 - **Custom pickup point checkout note** now ships with all text fields (`WCSNIP_PICKUP_NOTE_SHORT`, `WCSNIP_PICKUP_ADDRESS`, `WCSNIP_PICKUP_PHONE`, `WCSNIP_PICKUP_HOURS`) empty by default instead of placeholder example text. Nothing is printed at checkout or in order emails until at least one field is filled in, and any field left empty is silently skipped rather than shown as a blank line.
 
-[Unreleased]: https://github.com/Braska-botmaker/woocommerce-snippets/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Braska-botmaker/woocommerce-snippets/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Braska-botmaker/woocommerce-snippets/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Braska-botmaker/woocommerce-snippets/releases/tag/v1.0.0
