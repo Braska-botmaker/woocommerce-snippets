@@ -79,6 +79,11 @@ The message and heading are then registered as translatable strings under the na
 
 The strings appear there after the snippet has run once in wp-admin — just open that screen. No code, and a translator never touches the file.
 
+**WPML note:** the message/heading are translated via a WPML API call that reads the language **stored on the order** (`wpml_language` order meta, set by WooCommerce Multilingual), not whatever language WPML considers "current" at that moment — those two aren't always the same during an email send (cron, wp-admin, etc.), and relying on the wrong one is the most common reason the rest of the email is correctly translated but this message isn't. If the message still shows the wrong language:
+
+1. Confirm **WooCommerce Multilingual & Multicurrency** (a separate add-on from core WPML) is active, and that the specific order actually has a language assigned.
+2. In *WPML → String Translation*, check the entry under "Custom order email notice" shows your **current** message text as the original (retranslate it if you changed the message afterwards) and that its status is **Complete**, not just started.
+
 ### C. Translate in code — `locale => text` array
 
 For a store **without** Polylang/WPML, or if you prefer keeping the wording in the file, set the constant to a map instead of a string:

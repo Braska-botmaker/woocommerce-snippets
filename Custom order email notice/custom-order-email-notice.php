@@ -142,7 +142,7 @@ if ( ! function_exists( 'wcsnip_email_notice_pick_locale' ) ) {
  * translation UI ("Message" or "Heading").
  */
 if ( ! function_exists( 'wcsnip_email_notice_string_translate' ) ) {
-	function wcsnip_email_notice_string_translate( $text, $name ) {
+	function wcsnip_email_notice_string_translate( $text, $name, $email = null ) {
 		$text = (string) $text;
 
 		if ( ! WCSNIP_EMAIL_NOTICE_STRING_TRANSLATION || '' === trim( $text ) ) {
@@ -154,7 +154,14 @@ if ( ! function_exists( 'wcsnip_email_notice_string_translate' ) ) {
 		}
 
 		if ( has_filter( 'wpml_translate_single_string' ) ) {
-			return (string) apply_filters( 'wpml_translate_single_string', $text, 'Custom order email notice', $name );
+			// Read the order's own WPML language directly instead of relying
+			// on WPML's ambient "current language", which isn't always in
+			// sync with the locale WooCommerce switched to for this email
+			// (e.g. when the email is sent from a cron job or wp-admin).
+			$order = $email && is_a( $email->object, 'WC_Order' ) ? $email->object : null;
+			$lang  = $order ? $order->get_meta( 'wpml_language' ) : '';
+
+			return (string) apply_filters( 'wpml_translate_single_string', $text, 'Custom order email notice', $name, $lang ?: null );
 		}
 
 		return $text;
@@ -201,7 +208,7 @@ if ( ! function_exists( 'wcsnip_email_notice_message' ) ) {
 	function wcsnip_email_notice_message( $email = null ) {
 		$message = is_array( WCSNIP_EMAIL_NOTICE_MESSAGE )
 			? wcsnip_email_notice_pick_locale( WCSNIP_EMAIL_NOTICE_MESSAGE, '' )
-			: wcsnip_email_notice_string_translate( WCSNIP_EMAIL_NOTICE_MESSAGE, 'Message' );
+			: wcsnip_email_notice_string_translate( WCSNIP_EMAIL_NOTICE_MESSAGE, 'Message', $email );
 
 		$message = wcsnip_email_notice_pick_locale(
 			(array) apply_filters( 'wcsnip_email_notice_messages', array(), $email ),
@@ -219,7 +226,7 @@ if ( ! function_exists( 'wcsnip_email_notice_heading' ) ) {
 	function wcsnip_email_notice_heading( $email = null ) {
 		$heading = is_array( WCSNIP_EMAIL_NOTICE_HEADING )
 			? wcsnip_email_notice_pick_locale( WCSNIP_EMAIL_NOTICE_HEADING, '' )
-			: wcsnip_email_notice_string_translate( WCSNIP_EMAIL_NOTICE_HEADING, 'Heading' );
+			: wcsnip_email_notice_string_translate( WCSNIP_EMAIL_NOTICE_HEADING, 'Heading', $email );
 
 		$heading = wcsnip_email_notice_pick_locale(
 			(array) apply_filters( 'wcsnip_email_notice_headings', array(), $email ),
