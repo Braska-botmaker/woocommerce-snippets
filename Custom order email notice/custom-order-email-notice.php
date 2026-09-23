@@ -288,7 +288,7 @@ function wcsnip_email_notice_render( $order, $sent_to_admin, $plain_text, $email
 		: '';
 
 	$html = sprintf(
-		'<div style="margin:24px 0 0; padding-top:14px; border-top:1px solid #e0e0e0; font-size:14px; line-height:1.6;">%s%s</div>',
+		'<div style="margin:24px 0; padding-top:14px; border-top:1px solid #e0e0e0; font-size:14px; line-height:1.6;">%s%s</div>',
 		$heading_html,
 		nl2br( esc_html( $message ) )
 	);
